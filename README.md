@@ -2,11 +2,11 @@
 
 [![PHP Version](https://img.shields.io/badge/PHP-%3E%3D%208.0-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
 [![MySQL](https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://microsoft.com/windows)
 
 A modern, lightweight, and highly efficient **Point of Sale (POS), Inventory, and Khata (Credit / Customer Wallet) Management System** tailored specifically for provision stores, retail shops, and small businesses. Developed in **PHP** with support for both **MySQL (MariaDB)** and **PostgreSQL** databases.
 
+## CHECK OUR WEBSITE : Https://Hitanshparikh.tech/pos/
 ---
 
 ## 🌟 Key Features
@@ -52,12 +52,12 @@ pos/
 ### 1. Prerequisites
 Ensure you have the following installed on your machine:
 *   **PHP (v8.0 or higher)**
-*   **XAMPP / WampServer** (for MySQL) OR **PostgreSQL (v12 or higher)**
+*   **XAMPP / WampServer** (for MySQL) 
 *   A modern web browser
 
 ### 2. Database Setup
 
-#### Option A: MySQL / MariaDB (Recommended for XAMPP)
+->  MySQL / MariaDB (Recommended for XAMPP)
 1. Open **phpMyAdmin** (`http://localhost/phpmyadmin`).
 2. Create a database named `pos_db`.
 3. Import `mysql_database.sql` into `pos_db` using the **Import** tab.
@@ -69,23 +69,12 @@ Ensure you have the following installed on your machine:
    $password = '';      // Or your database password
    ```
 
-#### Option B: PostgreSQL Setup
-1. Create a PostgreSQL database named `pos_db`.
-2. Execute the `database.sql` script to load the schema:
-   ```bash
-   psql -U postgres -d pos_db -f database.sql
-   ```
-3. Update `config/db.php` to use the `pgsql` DSN:
-   ```php
-   $dsn = "pgsql:host=$host;dbname=$dbname";
-   ```
 
 ### 3. Enable Database Extensions in PHP
 If database connection errors occur, ensure the respective drivers are enabled:
 1. Open your `php.ini` file.
 2. Uncomment the following lines (remove the leading `;`):
    *   For MySQL: `extension=pdo_mysql`
-   *   For PostgreSQL: `extension=pdo_pgsql` and `extension=pgsql`
 3. Restart your web server.
 
 ---
@@ -101,15 +90,6 @@ We have provided convenient automation scripts to get you running in one click o
     php -S localhost:8000
     ```
     Then open **[http://localhost:8000](http://localhost:8000)** in your browser.
-
----
-
-## 🔑 Default Credentials
-
-On setup, you can register a new admin account or login using default credentials (if seeded):
-*   **Default Username:** `admin`
-*   **Default Password:** `admin123`
-*(Note: You will be prompted to change default credentials upon first login for safety).*
 
 ---
 
